@@ -1,0 +1,18 @@
+<div class="container" style="text-align: center;
+  padding-top: 8%;">
+		<div class="list">
+			 
+			 In order to get my friends.
+			 <hr>
+       <expander class="expander" expander-title="title" > 
+		   		<ul>
+					 	<li ng-repeat="friend in friends|filter:search|orderBy:'age'"  style="list-style: none">
+					 		  {{$index+1}}.{{friend.name}} is a {{friend.gender|uppercase}} who is {{friend.age}} years old. {{friend.date}}
+					 	</li>
+					 </ul>
+					  To find by any: <input ng-model="search">
+       </expander>  
+			 <hr>
+		</div>
+		<a href="#second"> <input type="button"  value="点击我跳转"></a> 
+</div>
